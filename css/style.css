@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #2e7d32;
+    /* Forest Green */
+    --secondary-color: #ffd600;
+    /* Sun/Highlight Yellow */
+    --accent-color: #8d6e63;
+    /* Earth/Bark Brown */
+    --text-dark: #212121;
+    --text-light: #f5f5f5;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(10px);
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll / glitch on mobile */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--primary-color) !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+/* Hover effects for links */
+.hover-warning:hover {
+    color: var(--secondary-color) !important;
+}
+
+.hover-primary:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Page Header */
+header {
+    margin-bottom: 0;
+}
+
+/* Footer - follows navbar style */
+footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 4rem 0 2rem;
+}
+
+/* Floating Features */
+.floating-wa {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    z-index: 2000;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.floating-wa:hover {
+    transform: translateY(-5px) scale(1.05);
+    color: white;
+}
+
+.floating-top {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    z-index: 2000;
+    background: var(--primary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: none;
+    /* Controlled by JS */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.floating-top.show {
+    display: flex;
+}
+
+.floating-top:hover {
+    background: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* Article Styling */
+.article-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/digital marketing_20251122_215851_0026.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    margin-bottom: 30px;
+    border-radius: 0 0 50px 50px;
+}
+
+.toc-card {
+    background: #ffffff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.toc-title {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toc-title:hover {
+    background: #f1f1f1 !important;
+}
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .article-header {
+        padding: 80px 0;
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+/* Utility */
+.fw-800 {
+    font-weight: 800;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.extra-small {
+    font-size: 0.75rem;
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Rich Card Elements */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1b5e20;
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}
